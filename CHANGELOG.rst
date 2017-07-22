@@ -1,0 +1,12 @@
+5.1.0 (2017-3-27)
+---------------------------------
+- Moved to Apache 2.0 license
+- Added Contribution Guidelines
+- Updated URDF for more accurate masses and inertial values for links
+- Tightens collision shapes in URDF
+
+5.0.4 (2016-12-06)
+---------------------------------
+- Initial release of sawyer_robot and sawyer_description_openrave packages
+- sawyer_robot is a metapackage for sawyer_description_openrave
+- sawyer_description_openrave contains all URDF and meshes required to visualize the Sawyer robot                                                                         
