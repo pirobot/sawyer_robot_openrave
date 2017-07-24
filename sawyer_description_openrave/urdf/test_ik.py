@@ -28,7 +28,7 @@ robot.SetActiveDOFs(m.GetArmIndices())
 
 while True:
         joint_values = np.random.uniform(low=-1.57, high=1.57, size=(7,)) # Pick a random set of joint values
-        
+
         print "Joint values:", joint_values
 
         robot.SetDOFValues(joint_values, [0, 1, 2, 3, 4, 5, 6]) # Set the joint values
