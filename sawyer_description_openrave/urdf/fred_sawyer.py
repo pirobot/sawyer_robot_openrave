@@ -1,5 +1,8 @@
 import os
 import openravepy
+from openravepy.misc import InitOpenRAVELogging
+
+InitOpenRAVELogging()
 
 openravepy.RaveInitialize(True, level=openravepy.DebugLevel.Error)
 env = openravepy.Environment()
