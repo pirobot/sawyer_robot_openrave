@@ -7,7 +7,7 @@ plugin = openravepy.RaveCreateModule(env, "urdf")
 env.SetViewer('qtcoin')
 
 with env:
-	name = plugin.SendCommand('load sawyer_fred.urdf sawyer_base_fred.srdf')
+	name = plugin.SendCommand('load sawyer_zero_right_hand_link.urdf sawyer_base_fred.srdf')
 	robot = env.GetRobot(name)
 
 robot.SetActiveManipulator('arm')
@@ -16,8 +16,9 @@ ikmodel = openravepy.databases.inversekinematics.InverseKinematicsModel(
 	robot, iktype=openravepy.IkParameterization.Type.Transform6D
 )
 
-if not ikmodel.load():
-	ikmodel.autogenerate()
+#if not ikmodel.load():
+#	ikmodel.autogenerate()
+ikmodel.generate(forceikbuild=True)
 
 m = robot.GetActiveManipulator()
 robot.SetActiveDOFs(m.GetArmIndices())

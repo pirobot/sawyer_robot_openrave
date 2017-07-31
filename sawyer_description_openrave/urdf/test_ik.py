@@ -11,7 +11,7 @@ plugin = openravepy.RaveCreateModule(env, "urdf")
 env.SetViewer('qtcoin')
 
 with env:
-	name = plugin.SendCommand('load sawyer_fred.urdf sawyer_base_fred.srdf')
+	name = plugin.SendCommand('load sawyer_zero_right_hand_link.urdf sawyer_base_fred.srdf')
 	robot = env.GetRobot(name)
 
 robot.SetActiveManipulator('arm')
