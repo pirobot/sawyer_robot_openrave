@@ -89,7 +89,8 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.12"/>
       <geometry>
-        <cylinder length="0.24" radius="0.08"/>
+        <!-- fred cylinder length="0.24" radius="0.08"/-->
+        <cylinder length="0.24" radius="0.11"/>
       </geometry>
     </collision>
   </link>
@@ -107,14 +108,16 @@
       <material name="sawyer_red"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0.08 0 0.23"/>
+      <!-- fred origin rpy="0 0 0" xyz="0.08 0 0.23"/ -->
+      <origin rpy="0 0 0" xyz="0.081 0 0.237"/>
       <geometry>
         <sphere radius="0.07"/>
       </geometry>
     </collision>
   </link>
   <joint name="right_j0" type="revolute">
-    <origin rpy="-0.0002985644 0.0018972651 4.67207e-05" xyz="0.000163597 5.46084e-05 0.0795794219"/>
+    <!-- fred origin rpy="-0.0002985644 0.0018972651 4.67207e-05" xyz="0.000163597 5.46084e-05 0.0795794219"/ -->
+    <origin rpy="0 0 0" xyz="0 0 0.08"/>
     <parent link="right_arm_base_link"/>
     <child link="right_l0"/>
     <axis xyz="0 0 1"/>
@@ -134,14 +137,17 @@
       <material name="sawyer_red"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0.08"/>
+      <!-- fred origin rpy="0 0 0" xyz="0 0 0.08"/-->
+      <origin rpy="0 0 0" xyz="0 0 0.12"/>
       <geometry>
-        <sphere radius="0.18"/>
+        <!-- fred sphere radius="0.18"/ -->
+        <cylinder length="0.28" radius="0.065"/>
       </geometry>
     </collision>
   </link>
   <joint name="head_pan" type="revolute">
-    <origin rpy="-0.000375610612151 -0.000717773645631 0.060618282317" xyz="-0.00043503123114 0.000635456478455 0.2965"/>
+    <!-- fred origin rpy="-0.000375610612151 -0.000717773645631 0.060618282317" xyz="-0.00043503123114 0.000635456478455 0.2965"/-->
+    <origin rpy="0 0 0" xyz="0 0 0.2965"/>
     <parent link="right_l0"/>
     <child link="head"/>
     <axis xyz="0 0 1"/>
@@ -155,7 +161,8 @@
     </inertial>
   </link>
   <joint name="right_torso_itb" type="fixed">
-    <origin rpy="0 -1.57079632679 0" xyz="-.055 0 .22"/>
+    <!-- fred origin rpy="0 -1.57079632679 0" xyz="-.055 0 .22"/ -->
+    <origin rpy="0 -1.5708 0" xyz="-.055 0 .22"/>
     <parent link="right_l0"/>
     <child link="right_torso_itb"/>
     <axis xyz="0 0 1"/>
@@ -181,7 +188,8 @@
     </collision>
   </link>
   <joint name="right_j1" type="revolute">
-    <origin rpy="-1.57005949279 1.56949847329 -0.0008032605" xyz="0.0807732027 0.0500167937 0.237"/>
+    <!-- fred origin rpy="-1.57005949279 1.56949847329 -0.0008032605" xyz="0.0807732027 0.0500167937 0.237"/-->
+    <origin rpy="-1.5708 1.5708 0" xyz="0.081 0.05 0.237"/>
     <parent link="right_l0"/>
     <child link="right_l1"/>
     <axis xyz="0 0 1"/>
@@ -189,9 +197,12 @@
   </joint>
   <link name="right_l2">
     <inertial>
-      <origin rpy="0 0 0" xyz="-0.00016044 -0.014967 0.13582"/>
-      <mass value="1.745"/>
-      <inertia ixx="0.025506" ixy="4.4101E-06" ixz="1.4955E-05" iyy="0.0253" iyz="-0.0033204" izz="0.0034179"/>
+      <!-- fred origin rpy="0 0 0" xyz="-0.00016044 -0.014967 0.13582"/-->
+      <origin rpy="0 0 0" xyz="-0.00016232 -0.015346 0.13445"/>
+      <!-- fred mass value="1.745"/ -->
+      <mass value="1.7251"/>
+      <!-- inertia ixx="0.025506" ixy="4.4101E-06" ixz="1.4955E-05" iyy="0.0253" iyz="-0.0033204" izz="0.0034179"/ -->
+      <inertia ixx="0.025176" ixy="4.3031E-06" ixz="1.4564E-05" iyy="0.024982" iyz="-0.0033928" izz="0.0033798"/>
     </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -208,7 +219,8 @@
     </collision>
   </link>
   <joint name="right_j2" type="revolute">
-    <origin rpy="1.56982185629 -0.0008951969 0.0024593204" xyz="-0.0011561 -0.1402394172 0.1425177448"/>
+    <!-- fred origin rpy="1.56982185629 -0.0008951969 0.0024593204" xyz="-0.0011561 -0.1402394172 0.1425177448"/-->
+    <origin rpy="1.5708 0 0" xyz="0 -0.14 0.1425"/>
     <parent link="right_l1"/>
     <child link="right_l2"/>
     <axis xyz="0 0 1"/>
@@ -216,7 +228,8 @@
   </joint>
   <link name="right_l3">
     <inertial>
-      <origin rpy="0 0 0" xyz="-0.0048135 -0.0281 -0.084154"/>
+      <!-- fred origin rpy="0 0 0" xyz="-0.0048135 -0.0281 -0.084154"/-->
+      <origin rpy="0 0 0" xyz="-0.0046678 -0.028394 -0.083127"/>
       <mass value="2.5097"/>
       <inertia ixx="0.01016" ixy="-9.7452E-06" ixz="0.00026624" iyy="0.0065685" iyz="0.0030316" izz="0.0069078"/>
     </inertial>
@@ -235,7 +248,8 @@
     </collision>
   </link>
   <joint name="right_j3" type="revolute">
-    <origin rpy="-1.57152985219 -0.0004637381 0.00025132" xyz="-0.0003042945 -0.0421041777 0.2600595397"/>
+    <!-- fred origin rpy="-1.57152985219 -0.0004637381 0.00025132" xyz="-0.0003042945 -0.0421041777 0.2600595397"/-->
+    <origin rpy="-1.5708 0 0" xyz="0 -0.042 0.26"/>
     <parent link="right_l2"/>
     <child link="right_l3"/>
     <axis xyz="0 0 1"/>
@@ -243,7 +257,8 @@
   </joint>
   <link name="right_l4">
     <inertial>
-      <origin rpy="0 0 0" xyz="-0.0018844 0.0069001 0.1341"/>
+      <!-- fred origin rpy="0 0 0" xyz="-0.0018844 0.0069001 0.1341"/-->
+      <origin rpy="0 0 0" xyz="-0.0027794 0.0076558 0.13273"/>
       <mass value="1.1136"/>
       <inertia ixx="0.013557" ixy="1.8109E-05" ixz="0.00013523" iyy="0.013555" iyz="0.0010561" izz="0.0013658"/>
     </inertial>
@@ -262,7 +277,8 @@
     </collision>
   </link>
   <joint name="right_j4" type="revolute">
-    <origin rpy="1.57148053569 -0.0006765717 -0.0004526017" xyz="-4.14656e-05 -0.1247526357 -0.1266411523"/>
+    <!-- origin rpy="1.57148053569 -0.0006765717 -0.0004526017" xyz="-4.14656e-05 -0.1247526357 -0.1266411523"/-->
+    <origin rpy="1.5708 0 0" xyz="0 -0.125 -0.1265"/>
     <parent link="right_l3"/>
     <child link="right_l4"/>
     <axis xyz="0 0 1"/>
@@ -276,14 +292,16 @@
     </inertial>
   </link>
   <joint name="right_arm_itb" type="fixed">
-    <origin rpy="0 -1.57079632679 0" xyz="-.055 0 .075"/>
+    <!-- fred origin rpy="0 -1.57079632679 0" xyz="-.055 0 .075"/ -->
+    <origin rpy="0 -1.5708 0" xyz="-.055 0 .075"/>
     <parent link="right_l4"/>
     <child link="right_arm_itb"/>
     <axis xyz="0 0 1"/>
   </joint>
   <link name="right_l5">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.0061133 -0.023697 0.076416"/>
+      <!-- fred origin rpy="0 0 0" xyz="0.0061133 -0.023697 0.076416"/ -->
+      <origin rpy="0 0 0" xyz="0.0062067 -0.024291 0.075564"/>
       <mass value="1.5625"/>
       <inertia ixx="0.0047328" ixy="0.00011526" ixz="4.6269E-05" iyy="0.0029676" iyz="-0.0011557" izz="0.0031762"/>
     </inertial>
@@ -302,7 +320,8 @@
     </collision>
   </link>
   <joint name="right_j5" type="revolute">
-    <origin rpy="-1.56869259669 0.0005321883 0.0007813353" xyz="-0.0001236812 0.0307252196 0.2746521054"/>
+    <!-- fred origin rpy="-1.56869259669 0.0005321883 0.0007813353" xyz="-0.0001236812 0.0307252196 0.2746521054"/-->
+    <origin rpy="-1.5708 0 0" xyz="0 0.031 0.275"/>
     <parent link="right_l4"/>
     <child link="right_l5"/>
     <axis xyz="0 0 1"/>
@@ -310,14 +329,16 @@
   </joint>
   <link name="right_hand_camera"/>
   <joint name="right_hand_camera" type="fixed">
-    <origin rpy="-0.445734774695 1.55629550314 -0.429789630424" xyz="0.0382275754565 -0.032511331905 0.0686165502955"/>
+    <!-- fred origin rpy="-0.445734774695 1.55629550314 -0.429789630424" xyz="0.0382275754565 -0.032511331905 0.0686165502955"/-->
+    <origin rpy="0 1.5708 0" xyz="0.039552 -0.033 0.0695"/>
     <parent link="right_l5"/>
     <child link="right_hand_camera"/>
     <axis xyz="0 0 0"/>
   </joint>
   <link name="right_wrist"/>
   <joint name="right_wrist" type="fixed">
-    <origin rpy="1.57079632679 0 0" xyz="0 0 0.10541"/>
+    <!-- fred origin rpy="1.57079632679 0 0" xyz="0 0 0.10541"/ -->
+    <origin rpy="1.5708 0 0" xyz="0 0 0.10541"/>
     <parent link="right_l5"/>
     <child link="right_wrist"/>
     <axis xyz="0 0 0"/>
@@ -343,7 +364,8 @@
     </collision>
   </link>
   <joint name="right_j6" type="revolute">
-    <origin rpy="-1.56987330589 -0.1773123624 3.1421484795" xyz="0.0001362646 -0.1098066995 0.1050523612"/>
+    <!-- fred origin rpy="-1.56987330589 -0.1773123624 3.1421484795" xyz="0.0001362646 -0.1098066995 0.1050523612"/-->
+    <origin rpy="-1.5708 -0.17453 3.1416" xyz="0 -0.11 0.1053"/>
     <parent link="right_l5"/>
     <child link="right_l6"/>
     <axis xyz="0 0 1"/>
@@ -363,7 +385,8 @@
     </inertial>
   </link>
   <joint name="right_hand" type="fixed">
-    <origin rpy="0 0 1.570796" xyz="0 0 0.0245"/>
+    <!-- fred origin rpy="0 0 1.570796" xyz="0 0 0.0245"/ -->
+    <origin rpy="0 0 1.5708" xyz="0 0 0.0245"/>
     <axis xyz="0 0 1"/>
     <parent link="right_l6"/>
     <child link="right_hand"/>
@@ -434,9 +457,11 @@
       <material name="darkgray"/>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <!-- fred origin rpy="0 0 0" xyz="0 0 0"/-->
+      <origin rpy="0 0 0" xyz="0 -0.005 -0.005"/>
       <geometry>
-        <sphere radius="0.001"/>
+        <!-- fred sphere radius="0.001"/ -->
+        <box size="0.32 0.22 0.1"/>
       </geometry>
     </collision>
     <inertial>
@@ -446,116 +471,17 @@
     </inertial>
   </link>
   <joint name="display_joint" type="fixed">
-    <origin rpy="1.57079632679 0 1.57079632679" xyz="0.03 0.0 0.105"/>
+    <!-- fred origin rpy="1.57079632679 0 1.57079632679" xyz="0.03 0.0 0.105"/-->
+    <origin rpy="1.5708 0 1.5708" xyz="0.03 0.0 0.105"/>
     <parent link="head"/>
     <child link="screen"/>
   </joint>
   <link name="head_camera"/>
   <joint name="head_camera" type="fixed">
-    <origin rpy="-2.12362578457 0.00914483957425 -1.57079632679" xyz="0.0253976919969 -0.000870932656271 0.215696810568"/>
+    <!-- fred origin rpy="-2.12362578457 0.00914483957425 -1.57079632679" xyz="0.0253976919969 -0.000870932656271 0.215696810568"/-->
+    <origin rpy="-2.1293 0 -1.5708" xyz="0.0228027 0 0.216572"/>
     <parent link="head"/>
     <child link="head_camera"/>
     <axis xyz="0 0 0"/>
   </joint>
-  
-<!--
-  <link name="controller_box">
-    <collision>
-      <origin rpy="0 0 0" xyz="-0.325 0 -0.38"/>
-      <geometry>
-        <box size="0.22 0.4 0.53"/>
-      </geometry>
-    </collision>
-  </link>
-  <joint name="controller_box_fixed" type="fixed">
-    <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
-    <parent link="base"/>
-    <child link="controller_box"/>
-  </joint>
-  <link name="pedestal_feet">
-    <collision>
-      <origin rpy="0 0 0" xyz="-0.1225 0 -0.758"/>
-      <geometry>
-        <box size="0.77 0.7 0.31"/>
-      </geometry>
-    </collision>
-  </link>
-  <joint name="pedestal_feet_fixed" type="fixed">
-    <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
-    <parent link="base"/>
-    <child link="pedestal_feet"/>
-  </joint>
-  <joint name="right_gripper_base" type="fixed">
-    <child link="right_gripper_base">
-    </child>
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.00500000000000000">
-    </origin>
-    <parent link="right_hand">
-    </parent>
-  </joint>
-  <joint name="right_gripper_endpoint" type="fixed">
-    <child link="right_gripper">
-    </child>
-    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0500000000000000">
-    </origin>
-    <parent link="right_gripper_base">
-    </parent>
-  </joint>
-  <link name="right_gripper_base">
-    <collision>
-      <geometry>
-        <cylinder length="0.118" radius="0.070">
-        </cylinder>
-      </geometry>
-      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.00500000000000000">
-      </origin>
-    </collision>
-    <inertial>
-      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0">
-      </inertia>
-      <mass value="0.440000000000000">
-      </mass>
-      <origin rpy="0.0 0.0 0.0" xyz="0.00280000000000000 -0.000400000000000000 0.0322000000000000">
-      </origin>
-    </inertial>
-    <visual>
-      <geometry>
-        <mesh filename="package://intera_tools_description/meshes/electric_gripper/electric_gripper_w_fingers.DAE" scale="1.0 1.0 1.0">
-        </mesh>
-      </geometry>
-      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.00100000000000000">
-      </origin>
-    </visual>
-  </link>
-  <link name="right_gripper">
-    <collision>
-      <geometry>
-        <box size="0.0100000000000000 0.0100000000000000 0.0100000000000000">
-        </box>
-      </geometry>
-      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0">
-      </origin>
-    </collision>
-    <inertial>
-      <inertia ixx="1.00000000000000e-08" ixy="0.0" ixz="0.0" iyy="1.00000000000000e-08" iyz="0.0" izz="1.00000000000000e-08">
-      </inertia>
-      <mass value="0.0">
-      </mass>
-      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0">
-      </origin>
-    </inertial>
-    <visual>
-      <geometry>
-        <box size="0.0150000000000000 0.0150000000000000 0.0150000000000000">
-        </box>
-      </geometry>
-      <material name="darkgrey">
-        <color rgba="0.200000000000000 0.300000000000000 0.300000000000000 1.0">
-        </color>
-      </material>
-      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0">
-      </origin>
-    </visual>
-  </link>
--->
-  </robot>
+p  </robot>

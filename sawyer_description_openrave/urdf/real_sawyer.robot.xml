@@ -1,0 +1,6 @@
+<robot file="real_sawyer_pre_rounded.dae">
+  <manipulator name="arm">
+    <base>base</base> 
+   <effector>right_hand</effector> 
+  </manipulator>
+</robot>
